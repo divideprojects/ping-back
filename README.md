@@ -15,3 +15,7 @@ A simple example looks like:
 https://ping-back.divkix.me/pingback?link=https://divkix.me?method=GET
 
 This will just ping the domain https://divkix.me url and return a 200 status code if the url is reachable.
+
+### Deploy your own using vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDivideProjects%2Fping-back&demo-title=Ping%20Back&demo-description=A%20simple%20ping-back%20website%20made%20using%20fastapi.&demo-url=https%3A%2F%2Fping-back.divkix.me)
