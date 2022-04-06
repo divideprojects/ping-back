@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ping Back - Divkix</title>
+    <script async src="https://arc.io/widget.min.js#LNGpwZne"></script>
+    <script
+      async
+      src="https://ackee.divkix.me/tracker.js"
+      data-ackee-server="https://ackee.divkix.me"
+      data-ackee-domain-id="092398aa-0216-4fca-bbc8-791b630a280a"
+      data-ackee-opts='{ "detailed": true }'
+    ></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      html {
+        display: table;
+        margin: auto;
+      }
+      body {
+        background-color: #ecbfcd;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div align="left">
+      <div align="center">
+        <h1>Ping Back</h1>
+        <p>
+          Base domain:
+          <a href="https://ping-back.divkix.me/"
+            >https://ping-back.divkix.me/</a
+          >
+        </p>
+      </div>
+
+      <p>
+        There are just 2 URL Parameters that are required:
+        <br />
+        - link: the url to ping <br />
+        - method: the method to use to ping the link, default is GET, but you
+        can use either GET or POST
+
+        <br />
+        <br />
+        A simple example looks like:
+        <br />
+        <a
+          href="https://ping-back.divkix.me/pingback?link=https://divkix.me?method=GET"
+          >https://ping-back.divkix.me/pingback?link=https://divkix.me?method=GET</a
+        >
+        <br />
+        <br />
+        This will just ping the domain
+        <a href="https://divkix.me">https://divkix.me</a> url and return a 200
+        status code if the url is reachable.
+      </p>
+    </div>
+  </body>
+</html>

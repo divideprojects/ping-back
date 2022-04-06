@@ -7,12 +7,12 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "app.py"
-        },
-        {
             "src": "/arc-sw.js",
             "dest": "https://arc.io/arc-sw.js"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "app.py"
         }
     ],
     "github": {

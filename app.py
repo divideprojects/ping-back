@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from requests import post, get
 from validators import url as url_validation
+from fastapi.staticfiles import StaticFiles
 
 # define the app
 app = FastAPI()
@@ -14,37 +15,33 @@ app.add_middleware(
 )
 
 # Data to show when the user visits the homepage
-@app.get("/")
-def read_root():
-    return {
-        "message": "Hi, this is a simple API used to verify the status of a hcaptcha verification token"
-    }
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 
-@app.get("/ping-back")
+@app.get("/pingback")
 def ping_back(
-    remote_url: str = None,
+    link: str = None,
     method: str = "get",
 ):
-    if remote_url is None:
+    if link is None:
         return HTTPException(status_code=400, detail="No remote url provided")
-    elif remote_url == "":
+    elif link == "":
         return HTTPException(status_code=400, detail="Please provide a valid URL")
-    if not url_validation(remote_url):
+    if not url_validation(link):
         return HTTPException(status_code=400, detail="Invalid remote url")
 
     r = None
     method = method.lower()
 
     if method == "get":
-        r = get(remote_url)
+        r = get(link)
     elif method == "post":
-        r = post(remote_url)
+        r = post(link)
     else:
         return HTTPException(status_code=400, detail="Invalid method provided")
 
     return {
         "success": r.status_code == 200,
-        "url": remote_url,
+        "url": link,
         "status_code": r.status_code,
     }
