@@ -1,0 +1,21 @@
+{
+    "builds": [
+        {
+            "src": "app.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "app.py"
+        },
+        {
+            "src": "/arc-sw.js",
+            "dest": "https://arc.io/arc-sw.js"
+        }
+    ],
+    "github": {
+        "silent": true
+    }
+}

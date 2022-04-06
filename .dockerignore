@@ -1,0 +1,6 @@
+**
+!app/
+!gunicorn_conf.py
+!pyproject.toml
+!poetry.lock
+!docker-entrypoint.sh
