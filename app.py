@@ -14,9 +14,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Data to show when the user visits the homepage
-app.mount("/", StaticFiles(directory="static", html=True), name="static")
-
 
 @app.get("/pingback")
 def ping_back(
@@ -45,3 +42,7 @@ def ping_back(
         "url": link,
         "status_code": r.status_code,
     }
+
+
+# Data to show when the user visits the homepage
+app.mount("/", StaticFiles(directory="static", html=True), name="static")

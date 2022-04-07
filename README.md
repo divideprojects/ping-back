@@ -1,4 +1,4 @@
-# Tools
+# ping-back
 
 A simple API made to ping the url specified in url parameters
 
