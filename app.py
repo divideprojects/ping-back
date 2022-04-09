@@ -14,9 +14,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# define the '/alive' endpoint
+@app.get("/alive")
+async def alive():
+    return {"status": "alive"}
 
+
+# define the '/pingback' endpoint which does main work
 @app.get("/pingback")
-def ping_back(
+async def ping_back(
     link: str = None,
     method: str = "get",
 ):
@@ -28,7 +34,7 @@ def ping_back(
         return HTTPException(status_code=400, detail="Invalid remote url")
 
     r = None
-    method = method.lower()
+    method = method.lower()  # lowercase the method
 
     if method == "get":
         r = get(link)
