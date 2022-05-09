@@ -540,7 +540,7 @@ Pillow = ">=9.0.1,<10.0.0"
 
 [[package]]
 name = "pytube"
-version = "12.0.0"
+version = "12.1.0"
 description = "Python 3 library for downloading YouTube Videos."
 category = "main"
 optional = false
@@ -725,7 +725,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "134c45b3244a2bd72a2e48f1f180372b6e871b27dce0de5c1db962ff14d17e52"
+content-hash = "6644d6c8c12670c8bc5ce741520d5df34e4e97ed389eb1bfdea42817fece1356"
 
 [metadata.files]
 aiohttp = [
@@ -1318,8 +1318,8 @@ pypers = [
     {file = "pypers-1.2.1.tar.gz", hash = "sha256:322d4273a9a69ff394983c00d89172c9a1c7538487ca86b76d8d048dbe895351"},
 ]
 pytube = [
-    {file = "pytube-12.0.0-py3-none-any.whl", hash = "sha256:e6cb158ab16f747eae490a5f49233ddb1f111a425c014fb8a9cda7fcb806a689"},
-    {file = "pytube-12.0.0.tar.gz", hash = "sha256:422a9c2e1d35521f00c692b59c18edbaf2c1e12197bd36745bf00a26875674db"},
+    {file = "pytube-12.1.0-py3-none-any.whl", hash = "sha256:c2e4b1ffdf9eca4c287f881557a6b4f98dd287ecfa06e2e5d5936d39c5f4d8da"},
+    {file = "pytube-12.1.0.tar.gz", hash = "sha256:6de1f3a4cb125dd6ff912598c7e88a866325a63cc91755cae616f53c40ae5503"},
 ]
 pyyaml = [
     {file = "PyYAML-6.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d4db7c7aef085872ef65a8fd7d6d09a14ae91f691dec3e87ee5ee0539d516f53"},
