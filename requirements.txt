@@ -22,7 +22,7 @@ motor==2.5.1; python_version >= "3.7" and python_version < "4.0" and python_full
 multidict==6.0.2; python_version >= "3.7" and python_version < "4.0"
 pillow==9.1.0; python_version >= "3.7" and python_version < "4.0"
 prettyconf==2.2.1
-pydantic==1.9.0; python_full_version >= "3.6.1"
+pydantic==1.9.1; python_full_version >= "3.6.1"
 pymongo==3.12.3; python_version >= "3.7" and python_version < "4.0" and python_full_version >= "3.5.2"
 pypers==1.2.1; python_version >= "3.7" and python_version < "4.0"
 pytube==12.1.0; python_version >= "3.6"
