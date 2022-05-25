@@ -28,7 +28,7 @@ async def ping_back(
 ):
     if link is None:
         return HTTPException(status_code=400, detail="No remote url provided")
-    elif link == "":
+    elif not link:
         return HTTPException(status_code=400, detail="Please provide a valid URL")
     if not url_validation(link):
         return HTTPException(status_code=400, detail="Invalid remote url")
