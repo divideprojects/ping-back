@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "tools"
+name = "ping-back"
 version = "1.0.0"
-description = "Tools hosted by divideprojects!"
+description = "ping-back API hosted by Divide Projects!"
 authors = ["Divanshu Chauhan <techdroidroot@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -17,11 +17,11 @@ prettyconf = "^2.2.1"
 validators = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
-black = "^22.3"
+black = "^22.3.0"
 pre-commit = "^2.19.0"
 pyclean = "^2.2.0"
 pylint = "^2.14.1"
-isort = "^5.9.3"
+isort = "^5.10.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
