@@ -1,9 +1,15 @@
 name: auto-update requirements.txt
+
 on:
   workflow_dispatch:
   pull_request:
+    types:
+      - opened
     branches:
       - "dependabot/pip/**"
+    paths:
+     - pyproject.toml
+     - poetry.lock
 
 jobs:
   auto-update:
@@ -12,14 +18,17 @@ jobs:
       - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v3
+
       - name: Install poetry
         run: |
           python -m pip install poetry
+
       - name: Update requirements.txt
         run: |
           poetry lock
           poetry install
           poetry export -f requirements.txt --without-hashes --output requirements.txt
+
       - name: Push Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
