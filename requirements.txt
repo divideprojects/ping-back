@@ -7,7 +7,7 @@ colorama==0.4.4; python_version >= "3.7" and python_full_version < "3.0.0" and p
 decorator==5.1.1; python_version >= "3.5"
 fastapi==0.78.0; python_full_version >= "3.6.1"
 gunicorn==20.1.0; python_version >= "3.5"
-h11==0.12.0; python_version >= "3.7"
+h11==0.13.0; python_version >= "3.7"
 idna==3.3; python_full_version >= "3.6.2" and python_version >= "3.6"
 prettyconf==2.2.1
 pydantic==1.9.1; python_full_version >= "3.6.1"
