@@ -1,0 +1,17 @@
+name: Close Pull Request
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - "dependabot/pip/**"
+    paths:
+     - requirements.txt
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: superbrothers/close-pull-request@v3
