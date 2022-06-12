@@ -24,10 +24,9 @@ jobs:
           python -m pip install poetry
 
       - name: Update requirements.txt
-        run: |
-          poetry lock
-          poetry install
-          poetry export -f requirements.txt --without-hashes --output requirements.txt
+        uses: DivideProjects/poetry-export-requirements-action@v1
+        with:
+          without-hashes: true
 
       - name: Push Changes
         uses: stefanzweifel/git-auto-commit-action@v4
