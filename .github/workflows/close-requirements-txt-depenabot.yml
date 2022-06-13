@@ -1,12 +1,12 @@
-name: Close Pull Request
+name: Close PR for requirements.txt
 
 on:
   workflow_dispatch:
-  pull_request:
+  pull_request_target:
     types:
       - opened
     branches:
-      - "dependabot/pip/**"
+      - main
     paths:
      - requirements.txt
 
@@ -14,4 +14,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: superbrothers/close-pull-request@v3
+    - uses: peter-evans/close-pull@v2
+      with:
+        comment: Auto-closing PR as requirements.txt does not need dependabot updates.
+        delete-branch: true
