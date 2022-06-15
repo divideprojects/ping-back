@@ -17,7 +17,7 @@ validators = "^0.20.0"
 black = "^22.3.0"
 pre-commit = "^2.19.0"
 pyclean = "^2.2.0"
-pylint = "^2.14.1"
+pylint = "^2.14.2"
 isort = "^5.10.1"
 
 [build-system]
