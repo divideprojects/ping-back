@@ -1,18 +1,12 @@
 {
-    "builds": [
+    "rewrites": [
         {
-            "src": "app.py",
-            "use": "@vercel/python"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/arc-sw.js",
-            "dest": "https://arc.io/arc-sw.js"
+            "source": "/arc-sw.js",
+            "destination": "https://arc.io/arc-sw.js"
         },
         {
-            "src": "/(.*)",
-            "dest": "app.py"
+            "source": "/(.*)",
+            "destination": "/api/app.py"
         }
     ],
     "github": {

@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from requests import post, get
 from validators import url as url_validation
-from fastapi.staticfiles import StaticFiles
 
 # define the app
 app = FastAPI()
@@ -23,19 +22,24 @@ async def alive():
 # define the '/pingback' endpoint which does main work
 @app.get("/pingback")
 async def ping_back(
-    link: str = None,
     method: str = "get",
+    link: str = None,
 ):
-    if link is None:
+
+    r = None
+
+    if link == None:
         return HTTPException(status_code=400, detail="No remote url provided")
     elif not link:
         return HTTPException(status_code=400, detail="Please provide a valid URL")
+
     if not url_validation(link):
-        return HTTPException(status_code=400, detail="Invalid remote url")
+        return HTTPException(
+            status_code=400,
+            detail="Invalid remote URL, make sure your URL conatins scheme such 'http://' or 'https://'",
+        )
 
-    r = None
     method = method.lower()  # lowercase the method
-
     if method == "get":
         r = get(link)
     elif method == "post":
@@ -48,7 +52,3 @@ async def ping_back(
         "url": link,
         "status_code": r.status_code,
     }
-
-
-# Data to show when the user visits the homepage
-app.mount("/", StaticFiles(directory="static", html=True), name="static")

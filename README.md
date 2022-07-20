@@ -16,7 +16,7 @@ There are just 2 URL Parameters that are required:
 
 A simple example looks like:
 
-https://ping-back.divideprojects.com/pingback?link=https://divideprojects.com?method=GET
+https://ping-back.divideprojects.com/pingback?method=GET&link=https://divideprojects.com
 
 This will just ping the domain https://divideprojects.com url and return a 200 status code if the url is reachable.
 
