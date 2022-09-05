@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from requests import post, get
+from requests import get, post
 from validators import url as url_validation
 
 # define the app
