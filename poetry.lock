@@ -456,7 +456,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.18.3"
+version = "0.19.0"
 description = "The lightning-fast ASGI server."
 category = "main"
 optional = false
@@ -467,7 +467,7 @@ click = ">=7.0"
 h11 = ">=0.8"
 
 [package.extras]
-standard = ["colorama (>=0.4)", "httptools (>=0.4.0)", "python-dotenv (>=0.13)", "pyyaml (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "watchfiles (>=0.13)", "websockets (>=10.0)"]
+standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)", "pyyaml (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "watchfiles (>=0.13)", "websockets (>=10.0)"]
 
 [[package]]
 name = "validators"
@@ -512,7 +512,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "96381399a4b802fb9144195d1b789d74e37b86c2aba9e65edfb29fecd0ec1406"
+content-hash = "fa8ce59974361e774843e6314c3a50d7fe04617818d4a68a2b1a20465c8c07ed"
 
 [metadata.files]
 anyio = [
@@ -800,8 +800,8 @@ urllib3 = [
     {file = "urllib3-1.26.9.tar.gz", hash = "sha256:aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"},
 ]
 uvicorn = [
-    {file = "uvicorn-0.18.3-py3-none-any.whl", hash = "sha256:0abd429ebb41e604ed8d2be6c60530de3408f250e8d2d84967d85ba9e86fe3af"},
-    {file = "uvicorn-0.18.3.tar.gz", hash = "sha256:9a66e7c42a2a95222f76ec24a4b754c158261c4696e683b9dadc72b590e0311b"},
+    {file = "uvicorn-0.19.0-py3-none-any.whl", hash = "sha256:cc277f7e73435748e69e075a721841f7c4a95dba06d12a72fe9874acced16f6f"},
+    {file = "uvicorn-0.19.0.tar.gz", hash = "sha256:cf538f3018536edb1f4a826311137ab4944ed741d52aeb98846f52215de57f25"},
 ]
 validators = [
     {file = "validators-0.20.0.tar.gz", hash = "sha256:24148ce4e64100a2d5e267233e23e7afeb55316b47d30faae7eb6e7292bc226a"},
