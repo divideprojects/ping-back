@@ -1,5 +1,8 @@
 # ping-back
 
+
+[![CI](https://github.com/divideprojects/ping-back/actions/workflows/ci.yml/badge.svg)](https://github.com/divideprojects/ping-back/actions/workflows/ci.yml)
+
 A simple API made to ping the url specified in url parameters
 
 ## Deploy your own
