@@ -13,6 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 # define the '/alive' endpoint
 @app.get("/alive")
 async def alive():
@@ -25,7 +26,6 @@ async def ping_back(
     method: str = "get",
     link: str = None,
 ):
-
     r = None
 
     if link == None:
