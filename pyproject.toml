@@ -2,7 +2,7 @@
 name = "ping-back"
 version = "1.0.0"
 description = "ping-back API hosted by Divide Projects!"
-authors = ["Divanshu Chauhan <techdroidroot@gmail.com>"]
+authors = ["Divanshu Chauhan <divkix@divkix.me>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
