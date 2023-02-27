@@ -470,14 +470,14 @@ aws = ["boto3"]
 
 [[package]]
 name = "pyclean"
-version = "2.6.0"
+version = "2.7.0"
 description = "Pure Python cross-platform pyclean. Clean up your Python bytecode."
 category = "dev"
 optional = false
 python-versions = "*"
 files = [
-    {file = "pyclean-2.6.0-py3-none-any.whl", hash = "sha256:fcf08662f86e146c0a1509d65a3624102797a74b1b65dacace2823e64462a52d"},
-    {file = "pyclean-2.6.0.tar.gz", hash = "sha256:9badd0a7f1539f522479e2db17f79df24c09e0300eeb696d37e3d40585078e27"},
+    {file = "pyclean-2.7.0-py3-none-any.whl", hash = "sha256:1d07d7173aec349babb3ae5c65f69953c5cd560f533be4954c249ed326520b28"},
+    {file = "pyclean-2.7.0.tar.gz", hash = "sha256:b26231194c56f9f58c6cba3ea57d740dee73a4554c9a3c92e2899350cc1e9183"},
 ]
 
 [[package]]
@@ -882,4 +882,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "07f0aa75ee00c1e01eb552a139fd7fcfa32f5b4a6fd0211583cb03d218c56af6"
+content-hash = "19ee6912932d90453d8214e614cd92f9c26b94284b3e7ba37570093d10311dbe"
