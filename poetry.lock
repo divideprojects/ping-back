@@ -749,14 +749,14 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.21.0"
+version = "0.21.1"
 description = "The lightning-fast ASGI server."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "uvicorn-0.21.0-py3-none-any.whl", hash = "sha256:e69e955cb621ae7b75f5590a814a4fcbfb14cb8f44a36dfe3c5c75ab8aee3ad5"},
-    {file = "uvicorn-0.21.0.tar.gz", hash = "sha256:8635a388062222082f4b06225b867b74a7e4ef942124453d4d1d1a5cb3750932"},
+    {file = "uvicorn-0.21.1-py3-none-any.whl", hash = "sha256:e47cac98a6da10cd41e6fd036d472c6f58ede6c5dbee3dbee3ef7a100ed97742"},
+    {file = "uvicorn-0.21.1.tar.gz", hash = "sha256:0fac9cb342ba099e0d582966005f3fdba5b0290579fed4a6266dc702ca7bb032"},
 ]
 
 [package.dependencies]
@@ -882,4 +882,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "38a6c914d77ed036fcffb91630e8ab978afe9c2e5cc15bcbe0da442eb3121e4c"
+content-hash = "8b07c54a6df5d327ef98c4d2c1ef96e546804c74179235cfe1f4e868189e56ac"
