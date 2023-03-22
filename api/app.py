@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from requests import get, post
-from validators import url as url_validation
+from pydantic import validator
+from typing import Optional
 
 # define the app
 app = FastAPI()
@@ -20,35 +21,36 @@ async def alive():
     return {"status": "alive"}
 
 
+class PingBackRequest:
+    method: str = "get"
+    link: Optional[str] = None
+
+    @validator("link")
+    def validate_link(cls, v):
+        if not v:
+            raise ValueError("Please provide a valid URL")
+        if not url_validation(v):
+            raise ValueError(
+                "Invalid remote URL, make sure your URL contains scheme such 'http://' or 'https://'"
+            )
+        return v
+
+
 # define the '/pingback' endpoint which does main work
 @app.get("/pingback")
-async def ping_back(
-    method: str = "get",
-    link: str = None,
-):
-    r = None
-
-    if link == None:
-        return HTTPException(status_code=400, detail="No remote url provided")
-    elif not link:
-        return HTTPException(status_code=400, detail="Please provide a valid URL")
-
-    if not url_validation(link):
-        return HTTPException(
-            status_code=400,
-            detail="Invalid remote URL, make sure your URL conatins scheme such 'http://' or 'https://'",
-        )
-
-    method = method.lower()  # lowercase the method
-    if method == "get":
-        r = get(link)
-    elif method == "post":
-        r = post(link)
-    else:
-        return HTTPException(status_code=400, detail="Invalid method provided")
-
-    return {
-        "success": r.status_code == 200,
-        "url": link,
-        "status_code": r.status_code,
-    }
+async def ping_back(request: PingBackRequest):
+    try:
+        if request.method.lower() == "get":
+            r = get(request.link)
+        elif request.method.lower() == "post":
+            r = post(request.link)
+        else:
+            raise HTTPException(status_code=400, detail="Invalid method provided")
+        r.raise_for_status()
+        return {
+            "success": r.ok,
+            "url": request.link,
+            "status_code": r.status_code,
+        }
+    except requests.exceptions.RequestException as e:
+        raise HTTPException(status_code=400, detail=str(e))
