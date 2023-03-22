@@ -1,8 +1,9 @@
+from typing import Optional
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from requests import get, post
 from pydantic import validator
-from typing import Optional
+from requests import get, post
 
 # define the app
 app = FastAPI()
@@ -31,7 +32,7 @@ class PingBackRequest:
             raise ValueError("Please provide a valid URL")
         if not url_validation(v):
             raise ValueError(
-                "Invalid remote URL, make sure your URL contains scheme such 'http://' or 'https://'"
+                "Invalid remote URL, make sure your URL contains scheme such 'http://' or 'https://'",
             )
         return v
 
