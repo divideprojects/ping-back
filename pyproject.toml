@@ -6,7 +6,7 @@ authors = ["Divanshu Chauhan <divkix@divkix.me>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.100.0"
+fastapi = "^0.100.1"
 gunicorn = "^20.1.0"
 uvicorn = "^0.23.2"
 requests = "^2.31.0"
